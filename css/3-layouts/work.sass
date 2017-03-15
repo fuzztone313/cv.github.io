@@ -1,0 +1,116 @@
+.alt-section
+    background: #ebb1f8
+    
+.section-work
+    overflow-x: hidden
+
+.work-belt
+    width: 200%
+    position: relative
+    left: 0%
+    +transition(all 800ms)
+    
+.thumb-wrap, .work-wrap
+    width: 50%
+    float: left
+    
+
+.thumb-container
+    max-width: 960px
+    margin: 0px auto 
+    padding-bottom: 100px
+    +clearfix
+    
+    .thumb-unit
+        display: block
+        width: 25%
+        float: left
+        position: relative
+        padding-top: 16%
+        overflow: hidden
+        cursor: pointer
+        background:
+            poaition: center center
+            repeat: no repeat
+            size: cover
+        +perspective(300)
+        
+        @media screen and (max-width: 540px)
+            width: 50%
+            padding-top: 26%
+        
+        background:
+            //image: url(../img/work/proj-1/img1.jpg)
+            position: center center
+            repeat: no repeat
+            size: cover
+            
+        .thumb-overlay
+            +position(absolute, -100% 0px null 0px)
+            height: 100%
+            background: fade-out(#ebb1f8, 0.2)
+            text-align: center
+            +display(flex)
+            +align-items(center)
+            +justify-content(space-around)
+            +transform(rotateX(180deg))
+            +transform-origin(center bottom)
+            opacity: 0
+            +transition(opacity, 400ms)
+            
+            strong
+                display: block
+                padding: 0px 20px
+                font:
+                    size: 20px
+                    weight: 300
+                text-transform: uppercase
+                color: #fff
+                text-decoration: none
+                line-height: 1.2
+                    
+        &:hover .thumb-overlay
+            top: 0%
+            +transform(rotateX(0deg))
+            opacity: 1
+            
+.work-container
+    max-width: 600px
+    margin: 0px auto
+    position: relative
+    display: none
+    
+    h4
+        font:
+            size: 28px
+            weight: 300
+        text-transform: uppercase
+        color: #a53a42
+        text-decoration: none
+        line-height: 1.2
+        margin: 0 auto 20px
+    
+    img
+        max-width: 100%
+        margin-bottom: 20px
+    
+.work-return 
+    img
+        +size(40px)
+        cursor: pointer
+        +position(absolute, -5px null null -60px)      
+
+
+        &:hover
+            opacity: 0.5
+        
+@media (max-width: 740px)
+    .work-container
+    
+        .work-return
+            img
+                left: 0px
+    
+        h4
+            margin-left: 60px
+        

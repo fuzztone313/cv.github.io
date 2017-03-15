@@ -1,0 +1,94 @@
+h3
+    font:
+        size: 18px
+        weight: 700
+    text-transform: uppercase
+    color: #a53a42
+    text-align: center
+    padding: 100px 0 30px
+    
+.face-lockup
+    max-width: 780px
+    +display(flex)
+    margin: 0 auto
+    +align-items(center)
+    +justify-content(space-around)
+    
+    .face-img
+        order: 3
+        
+        img
+            +size(200px)
+        
+        
+    [class^="itm-"]
+        +size(100px)
+                        
+        &.itm-1
+            order: 1
+            
+        &.itm-2
+            order: 2
+            
+        &.itm-3
+            order: 4
+            
+        &.itm-4
+            order: 5
+            
+
+@media screen and (max-width: 650px)
+    .face-lockup
+        display: block
+        text-align: center
+        
+        div
+            display: inline-block
+        .face-img
+            text-align: center
+            display: block
+            margin-bottom: 14px
+            
+.blurb
+    max-width: 620px
+    padding: 0 20px
+    margin: 50px auto
+    font-size: 24px
+    text-align: center
+    font-weight: 300s
+    
+.skill-lockup
+    max-width: 540px
+    margin: 100px auto
+    color: #a53a42
+    +clearfix
+    
+    .skill-unit
+        width: 270px
+        float: left
+        
+    .skill-label
+        font:
+            size: 18px
+            weight: 500
+        
+    .skill-icon
+        font-size: 0
+        margin: 3px 0 30px
+        
+    span
+        margin-top: 10px
+        margin-bottom: 10px
+        display: inline-block
+        +size(18px)
+        background-color: #e89197
+        margin-right: 5px
+        border-radius: 50% 
+        
+        &:after
+            content: ''
+            display: block
+            +size(14px)
+            background: #fdfba6
+            border-radius: 50%
+            margin: 2px  
